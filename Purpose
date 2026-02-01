@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Purpose | Nombela Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>…same header/nav…</header>
+
+<main>
+  <section>
+    <h2>Our Purpose</h2>
+    <p>
+      Our purpose is to help organisations operating in emerging markets align
+      financial integrity with social responsibility and long-term sustainability.
+    </p>
+
+    <p>
+      We believe ESG should move beyond compliance and reporting to become a
+      practical decision-making tool that strengthens governance, attracts
+      capital, and delivers measurable impact.
+    </p>
+  </section>
+</main>
+
+<footer>…</footer>
+</body>
+</html>
