@@ -11,41 +11,22 @@
 
     <style>
         :root {
-            --primary-green: #004f30;  /* Nedbank Deep Green */
-            --accent-green: #6ac127;   /* Sustainability Green */
-            --platinum: #f4f4f4;
-            --dark-grey: #333333;
+            --primary-green: #004f30; 
+            --accent-green: #6ac127;  
+            --platinum: #f8f9fa;
+            --dark-grey: #2d3436;
         }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--dark-grey);
-            line-height: 1.7;
-        }
-
-        h1, h2, h3, h4, .navbar-brand {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-
-        /* NAVIGATION */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #eee;
-            padding: 1rem 0;
-        }
-        .navbar-brand { color: var(--primary-green) !important; font-size: 1.25rem; }
-        .nav-link { color: var(--dark-grey) !important; font-weight: 600; margin-left: 1.5rem; transition: 0.3s; }
-        .nav-link:hover { color: var(--accent-green) !important; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--dark-grey); line-height: 1.7; overflow-x: hidden; }
+        h1, h2, h3, h4, .navbar-brand { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary-green); }
 
         /* HERO SECTION - TABLE MOUNTAIN */
         .hero {
-            background: linear-gradient(rgba(0, 79, 48, 0.75), rgba(0, 40, 24, 0.85)), 
-                        url('https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?q=80&w=2070&auto=format&fit=crop'); 
+            background: linear-gradient(rgba(0, 79, 48, 0.7), rgba(0, 40, 24, 0.85)), 
+                        url('https://images.unsplash.com/photo-1506466010722-395aa2bef877?q=80&w=2000&auto=format&fit=crop'); 
             background-size: cover;
-            background-position: center center;
-            background-attachment: fixed; /* Parallax effect for sleekness */
+            background-position: center;
+            background-attachment: fixed;
             height: 90vh;
             display: flex;
             align-items: center;
@@ -57,52 +38,50 @@
             background-color: var(--accent-green);
             color: white;
             padding: 14px 35px;
-            border-radius: 0; /* Square edges look more corporate */
+            border-radius: 2px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: 0.3s;
             border: none;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
-        .btn-nedbank:hover {
-            background-color: white;
-            color: var(--primary-green);
-            transform: translateY(-3px);
-        }
+        .btn-nedbank:hover { background-color: white; color: var(--primary-green); transform: translateY(-3px); }
 
-        /* SECTION STYLING */
         .section-padding { padding: 100px 0; }
         .bg-platinum { background-color: var(--platinum); }
-        .section-title { color: var(--primary-green); position: relative; padding-bottom: 15px; margin-bottom: 30px; }
-        .section-title::after {
+        
+        /* TIMELINE DESIGN */
+        .timeline-box { border-left: 3px solid var(--accent-green); padding-left: 20px; margin-bottom: 30px; position: relative; }
+        .timeline-box::before {
             content: '';
             position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 4px;
-            background: var(--accent-green);
+            left: -9px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--primary-green);
+            border-radius: 50%;
         }
-        .center-title::after { left: 50%; transform: translateX(-50%); }
 
-        /* SERVICE CARDS */
+        /* CONTACT FORM */
+        .form-control { border-radius: 0; border: 1px solid #ced4da; padding: 12px; }
+        .form-control:focus { border-color: var(--primary-green); box-shadow: none; }
+
+        .navbar { background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 15px 0; }
+        .nav-link { color: var(--dark-grey) !important; font-weight: 600; margin-left: 25px; transition: 0.3s; }
+        .nav-link:hover { color: var(--accent-green) !important; }
+
         .service-card {
             background: white;
             padding: 30px;
-            border-top: 5px solid var(--primary-green);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-green);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             height: 100%;
             transition: 0.3s;
         }
-        .service-card:hover { transform: translateY(-10px); }
-
-        /* FOOTER */
-        footer { background: #002818; color: white; padding: 60px 0 20px; }
-        .footer-link { color: #ccc; text-decoration: none; transition: 0.3s; }
-        .footer-link:hover { color: var(--accent-green); }
-
-        /* CONTACT FORM AREA */
-        .contact-box { background: var(--primary-green); color: white; padding: 40px; border-radius: 4px; }
+        .service-card:hover { transform: translateY(-5px); border-top-color: var(--accent-green); }
     </style>
 </head>
 <body>
@@ -110,7 +89,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <i data-lucide="leaf" class="me-2"></i> NOMBELA CONSULTING
+                <i data-lucide="shield-check" class="me-2"></i> NOMBELA CONSULTING
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -118,8 +97,8 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#purpose">Purpose</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Leadership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -127,14 +106,10 @@
     </nav>
 
     <header class="hero">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <h1 class="display-3 fw-bold mb-4">Sustainability Rooted in Integrity.</h1>
-                    <p class="lead mb-5 fs-4">Strengthening governance and ESG frameworks across African emerging markets.</p>
-                    <a href="#contact" class="btn btn-nedbank">Start a Conversation</a>
-                </div>
-            </div>
+        <div class="container">
+            <h1 class="display-3 text-white mb-4">Integrity in Every Decision.</h1>
+            <p class="lead text-white-50 mb-5 fs-4">Global ESG & Governance Advisory with a Chartered Accountant (SA) Pedigree.</p>
+            <a href="#contact" class="btn btn-nedbank">Begin Engagement</a>
         </div>
     </header>
 
@@ -142,16 +117,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2 class="section-title">Our Purpose</h2>
-                    <p class="lead">We align financial integrity with social responsibility.</p>
-                    <p>Nombela Consulting Group believes ESG should move beyond compliance and reporting to become a practical decision-making tool. We help organisations attract capital and deliver measurable impact through credible sustainability integration.</p>
-                    <p>Founded by a Chartered Accountant (SA), we bring financial discipline to the world of sustainability.</p>
+                    <h6 class="text-uppercase fw-bold text-success mb-3" style="letter-spacing: 2px;">Our Purpose</h6>
+                    <h2 class="mb-4">Beyond Compliance. <br>Toward Practical Value.</h2>
+                    <p class="lead">We believe ESG is a decision-making tool that attracts capital and strengthens institutional resilience.</p>
+                    <p>Our purpose is to help organisations operating in emerging markets align financial integrity with social responsibility. We bridge the gap between sustainability theory and the rigorous financial discipline expected by investors and donors.</p>
                 </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="p-5 bg-platinum border-start border-5 border-success">
-                        <h4 class="fw-bold mb-3">Africa-Based Advisory</h4>
-                        <p class="mb-0 text-muted">Operating across the continent and selected emerging markets, we partner with public institutions, investors, and high-impact private sector firms.</p>
-                    </div>
+                <div class="col-lg-5 offset-lg-1 bg-platinum p-5 border-start border-5 border-success">
+                    <h4 class="mb-3">Our Core Philosophy</h4>
+                    <p class="mb-0">"Sustainability is not an add-on; it is the fundamental core of long-term value creation and ethical leadership."</p>
                 </div>
             </div>
         </div>
@@ -160,64 +133,97 @@
     <section id="services" class="section-padding bg-platinum">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title center-title">What We Help Organisations Do</h2>
+                <h2 class="mb-2">What We Help Organisations Do</h2>
+                <p class="text-muted">High-impact advisory for institutions, investors, and social enterprises.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i data-lucide="map-pin" class="text-success mb-3" size="32"></i>
-                        <h5>ESG Roadmaps</h5>
-                        <p class="small text-muted">Develop tailored diagnostics and sustainability roadmaps for complex environments.</p>
+                        <i data-lucide="compass" class="text-success mb-3"></i>
+                        <h5>ESG Diagnostics</h5>
+                        <p class="small text-muted">Develop sustainability roadmaps and diagnostics tailored to high-impact emerging market environments.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i data-lucide="shield" class="text-success mb-3" size="32"></i>
-                        <h5>Governance</h5>
-                        <p class="small text-muted">Strengthen ethics, compliance, and institutional governance frameworks.</p>
+                        <i data-lucide="lock" class="text-success mb-3"></i>
+                        <h5>Governance & Ethics</h5>
+                        <p class="small text-muted">Strengthen ethics, compliance frameworks, and King IV alignment for institutional credibility.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i data-lucide="bar-chart-3" class="text-success mb-3" size="32"></i>
+                        <i data-lucide="pie-chart" class="text-success mb-3"></i>
                         <h5>Capital Readiness</h5>
-                        <p class="small text-muted">Prepare for funding, investment rounds, and strategic capital raises.</p>
+                        <p class="small text-muted">Prepare investment-ready financial models and reporting systems for funding and grant cycles.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i data-lucide="search" class="text-success mb-3" size="32"></i>
-                        <h5>Due Diligence</h5>
-                        <p class="small text-muted">Conduct ESG and impact-oriented due diligence for responsible capital deployment.</p>
+                        <i data-lucide="zoom-in" class="text-success mb-3"></i>
+                        <h5>Impact Due Diligence</h5>
+                        <p class="small text-muted">Rigorous ESG and impact-oriented due diligence to ensure responsible capital deployment.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i data-lucide="file-check" class="text-success mb-3" size="32"></i>
-                        <h5>Impact Reporting</h5>
-                        <p class="small text-muted">Design credible sustainability and impact reporting that meets international standards.</p>
+                        <i data-lucide="file-text" class="text-success mb-3"></i>
+                        <h5>Credible Reporting</h5>
+                        <p class="small text-muted">Design non-financial and impact reporting that meets international standards and donor requirements.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i data-lucide="briefcase" class="text-success mb-3" size="32"></i>
-                        <h5>Interim Support</h5>
-                        <p class="small text-muted">Senior-level advisory on a project or retainer basis without full-time overhead.</p>
+                        <i data-lucide="users" class="text-success mb-3"></i>
+                        <h5>Senior Advisory</h5>
+                        <p class="small text-muted">Expert fractional leadership and interim support for project-specific or retainer needs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="team" class="section-padding">
-        <div class="container text-center">
-            <h2 class="section-title center-title mb-5">Leadership</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card border-0 p-4">
-                        <h3 class="color-primary">Ndumiso Ngwabi</h3>
-                        <p class="text-success fw-bold">Founder & Managing Director | CA(SA)</p>
-                        <p class="text-muted">Ndumiso is a Chartered Accountant (SA) with extensive experience across professional and financial services. His work is grounded in the integration of governance, financial integrity, and sustainability, enabling organisations to thrive without compromising accountability.</p>
+    <section id="leadership" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h6 class="text-uppercase fw-bold text-success mb-3" style="letter-spacing: 2px;">Leadership</h6>
+                    <h2 class="mb-4">Ndumiso Ngwabi <span class="fs-4 text-muted d-block">CA(SA)</span></h2>
+                    <p class="lead">A Chartered Accountant and ESG Advisor with global experience across Africa, the UK, and the USA.</p>
+                    <p>Ndumiso's work is grounded in the integration of governance, financial integrity, and sustainability. His background in **Big Four audit** and **Asset Management** in London and NYC ensures a standard of delivery that satisfies the most demanding global stakeholders.</p>
+                </div>
+                
+                <div class="col-lg-6 offset-lg-1">
+                    <h5 class="mb-4 text-muted small fw-bold text-uppercase">Experience & Impact Timeline</h5>
+                    
+                    <div class="timeline-box">
+                        <h6 class="mb-1">The ESG Institute (Global)</h6>
+                        <p class="small fw-bold text-success">Senior Sustainability Advisor</p>
+                        <p class="small text-muted">Selected for a vetted network of specialists delivering ESG strategy and capacity building globally.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h6 class="mb-1">BDO UK LLP (London)</h6>
+                        <p class="small fw-bold text-success">Asset Management & Capital Markets</p>
+                        <p class="small text-muted">Assurance for investment firms; evaluated valuation methodologies and risk frameworks.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h6 class="mb-1">PwC (New York City)</h6>
+                        <p class="small fw-bold text-success">Senior Consultant (Financial Services)</p>
+                        <p class="small text-muted">Governance and social considerations for US hedge funds and CSR initiatives.</p>
+                    </div>
+
+                    <div class="timeline-box">
+                        <h6 class="mb-1">Deloitte (Johannesburg)</h6>
+                        <p class="small fw-bold text-success">Financial Institutions Specialist Team (FIST)</p>
+                        <p class="small text-muted">Audit focused on regulatory compliance, IFRS, and social protection systems.</p>
+                    </div>
+
+                    <div class="timeline-box border-0">
+                        <h6 class="mb-1">One K Foundation</h6>
+                        <p class="small fw-bold text-success">Co-Founder & Director</p>
+                        <p class="small text-muted">Leading financial sustainability and impact measurement for health initiatives. Global Champion for World Kidney Day.</p>
                     </div>
                 </div>
             </div>
@@ -227,35 +233,52 @@
     <section id="contact" class="section-padding bg-platinum">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="contact-box shadow-lg">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <h2 class="text-white">Ready to partner?</h2>
-                                <p class="text-light-50">Reach out to discuss how we can support your institution's sustainability journey.</p>
-                            </div>
-                            <div class="col-md-6 text-md-end">
-                                <a href="mailto:info@nombelaconsulting.com" class="btn btn-light btn-lg mb-3 mb-md-0 me-md-3">Email Us</a>
-                                <a href="https://www.linkedin.com/company/nombela-consulting/" target="_blank" class="btn btn-outline-light btn-lg">LinkedIn</a>
-                            </div>
+                <div class="col-lg-8">
+                    <div class="bg-white p-5 shadow-lg">
+                        <div class="text-center mb-5">
+                            <h2>Start a Consultation</h2>
+                            <p>Operating across Africa | Engagements by appointment</p>
                         </div>
+                        
+                        <form action="https://formspree.io/f/xvzqwkzw" method="POST" class="row g-4">
+                            <div class="col-md-6">
+                                <label class="small fw-bold">Name</label>
+                                <input type="text" name="name" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="small fw-bold">Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="small fw-bold">Service Category</label>
+                                <select name="service" class="form-control">
+                                    <option>ESG Diagnostics & Roadmaps</option>
+                                    <option>Governance & King IV Compliance</option>
+                                    <option>Capital Readiness & Due Diligence</option>
+                                    <option>Impact Reporting</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="small fw-bold">Message</label>
+                                <textarea name="message" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-nedbank w-100">Submit Enquiry</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 class="mb-4">Nombela Consulting Group</h5>
-                    <p class="small">Operating across Africa. Engagements by appointment.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="small">&copy; 2025 Nombela Consulting Group. All rights reserved.</p>
-                </div>
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <div class="mb-4">
+                <a href="https://www.linkedin.com/company/nombela-consulting/" class="text-white mx-2"><i data-lucide="linkedin"></i></a>
+                <a href="mailto:info@nombelaconsulting.com" class="text-white mx-2"><i data-lucide="mail"></i></a>
             </div>
+            <p class="small text-white-50">&copy; 2026 Nombela Consulting Group. Professional Advisory in ESG & Governance.</p>
         </div>
     </footer>
 
