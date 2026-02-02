@@ -1,170 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nombela Consulting Group</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombela Consulting Group | ESG & Governance Advisory</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #1f2937;
-    }
+    <style>
+        :root {
+            --primary-green: #004f30;  /* Nedbank Deep Green */
+            --accent-green: #6ac127;   /* Sustainability Green */
+            --platinum: #f4f4f4;
+            --dark-grey: #333333;
+        }
 
-    header {
-      background: #ecfdf5;
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 1px solid #d1fae5;
-    }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-grey);
+            line-height: 1.7;
+        }
 
-    h1, h2 {
-      color: #065f46;
-    }
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
 
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #14532d;
-      font-weight: 500;
-    }
+        /* NAVIGATION */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+        .navbar-brand { color: var(--primary-green) !important; font-size: 1.25rem; }
+        .nav-link { color: var(--dark-grey) !important; font-weight: 600; margin-left: 1.5rem; transition: 0.3s; }
+        .nav-link:hover { color: var(--accent-green) !important; }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        /* HERO SECTION - TABLE MOUNTAIN */
+        .hero {
+            background: linear-gradient(rgba(0, 79, 48, 0.75), rgba(0, 40, 24, 0.85)), 
+                        url('https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; /* Parallax effect for sleekness */
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
 
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
+        .btn-nedbank {
+            background-color: var(--accent-green);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 0; /* Square edges look more corporate */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            border: none;
+        }
+        .btn-nedbank:hover {
+            background-color: white;
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
 
-    section {
-      margin-bottom: 3rem;
-    }
+        /* SECTION STYLING */
+        .section-padding { padding: 100px 0; }
+        .bg-platinum { background-color: var(--platinum); }
+        .section-title { color: var(--primary-green); position: relative; padding-bottom: 15px; margin-bottom: 30px; }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--accent-green);
+        }
+        .center-title::after { left: 50%; transform: translateX(-50%); }
 
-    footer {
-      background: #f0fdf4;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      border-top: 1px solid #d1fae5;
-    }
+        /* SERVICE CARDS */
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-top: 5px solid var(--primary-green);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: 0.3s;
+        }
+        .service-card:hover { transform: translateY(-10px); }
 
-    .lucide-icon {
-      width: 1.25em;
-      height: 1.25em;
-      vertical-align: middle;
-      stroke: #14532d;
-      stroke-width: 2;
-      margin-right: 10px;
-    }
-  </style>
+        /* FOOTER */
+        footer { background: #002818; color: white; padding: 60px 0 20px; }
+        .footer-link { color: #ccc; text-decoration: none; transition: 0.3s; }
+        .footer-link:hover { color: var(--accent-green); }
+
+        /* CONTACT FORM AREA */
+        .contact-box { background: var(--primary-green); color: white; padding: 40px; border-radius: 4px; }
+    </style>
 </head>
-
 <body>
-  <header>
-    <img src="logo.png" alt="Nombela Consulting Logo" style="max-height: 200px;" />
 
-    <h1>NOMBELA CONSULTING GROUP</h1>
-
-    <p>
-      We support institutions, investors, and organisations to strengthen governance,
-      manage ESG risk, and build credible, investment-ready sustainability frameworks
-      across complex emerging-market environments.
-    </p>
-
-    <nav>
-      <a href="#about">Who We Are</a>
-      <a href="#team">Leadership</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i data-lucide="leaf" class="me-2"></i> NOMBELA CONSULTING
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#purpose">Purpose</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Leadership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <section id="about">
-      <h2><i data-lucide="info" class="lucide-icon"></i> Who We Are</h2>
+    <header class="hero">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-bold mb-4">Sustainability Rooted in Integrity.</h1>
+                    <p class="lead mb-5 fs-4">Strengthening governance and ESG frameworks across African emerging markets.</p>
+                    <a href="#contact" class="btn btn-nedbank">Start a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      <p>
-        Nombela Consulting Group is an Africa-based sustainability, ESG, and governance
-        advisory firm working across the continent and selected emerging markets.
-      </p>
-
-      <p>
-        Founded by a Chartered Accountant (SA), the firm brings together strong financial
-        discipline, governance expertise, and contextual understanding of African
-        development and investment landscapes.
-      </p>
-
-      <p>
-        Our work focuses on helping organisations move beyond ESG compliance toward
-        practical, decision-useful sustainability integration that supports long-term
-        value creation, institutional credibility, and responsible capital deployment.
-      </p>
-
-      <p>
-        We partner with public institutions, development finance actors, investors,
-        and private-sector organisations operating in regulated, high-impact, or
-        development-oriented environments that require credible, senior-level advisory
-        support.
-      </p>
+    <section id="purpose" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Our Purpose</h2>
+                    <p class="lead">We align financial integrity with social responsibility.</p>
+                    <p>Nombela Consulting Group believes ESG should move beyond compliance and reporting to become a practical decision-making tool. We help organisations attract capital and deliver measurable impact through credible sustainability integration.</p>
+                    <p>Founded by a Chartered Accountant (SA), we bring financial discipline to the world of sustainability.</p>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="p-5 bg-platinum border-start border-5 border-success">
+                        <h4 class="fw-bold mb-3">Africa-Based Advisory</h4>
+                        <p class="mb-0 text-muted">Operating across the continent and selected emerging markets, we partner with public institutions, investors, and high-impact private sector firms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="team">
-      <h2><i data-lucide="users" class="lucide-icon"></i> Leadership</h2>
-
-      <p><strong>Ndumiso Ngwabi</strong> – Founder & Managing Director</p>
-
-      <p>
-        Ndumiso is a Chartered Accountant (SA) and sustainability and governance advisor
-        with experience spanning professional services, financial services, and impact-oriented
-        advisory environments across Africa.
-      </p>
-
-      <p>
-        He has worked on engagements involving ESG strategy, governance reviews,
-        impact-oriented due diligence, and non-financial reporting, supporting institutions
-        and organisations navigating complex regulatory and stakeholder landscapes.
-      </p>
-
-      <p>
-        His work is grounded in the integration of governance, financial integrity,
-        and sustainability, enabling organisations to pursue their mandates without
-        compromising accountability, credibility, or long-term resilience.
-      </p>
+    <section id="services" class="section-padding bg-platinum">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title center-title">What We Help Organisations Do</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i data-lucide="map-pin" class="text-success mb-3" size="32"></i>
+                        <h5>ESG Roadmaps</h5>
+                        <p class="small text-muted">Develop tailored diagnostics and sustainability roadmaps for complex environments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i data-lucide="shield" class="text-success mb-3" size="32"></i>
+                        <h5>Governance</h5>
+                        <p class="small text-muted">Strengthen ethics, compliance, and institutional governance frameworks.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i data-lucide="bar-chart-3" class="text-success mb-3" size="32"></i>
+                        <h5>Capital Readiness</h5>
+                        <p class="small text-muted">Prepare for funding, investment rounds, and strategic capital raises.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i data-lucide="search" class="text-success mb-3" size="32"></i>
+                        <h5>Due Diligence</h5>
+                        <p class="small text-muted">Conduct ESG and impact-oriented due diligence for responsible capital deployment.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i data-lucide="file-check" class="text-success mb-3" size="32"></i>
+                        <h5>Impact Reporting</h5>
+                        <p class="small text-muted">Design credible sustainability and impact reporting that meets international standards.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i data-lucide="briefcase" class="text-success mb-3" size="32"></i>
+                        <h5>Interim Support</h5>
+                        <p class="small text-muted">Senior-level advisory on a project or retainer basis without full-time overhead.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2><i data-lucide="mail" class="lucide-icon"></i> Contact</h2>
-
-      <p>
-        Email:
-        <a href="mailto:info@nombelaconsulting.com">info@nombelaconsulting.com</a>
-      </p>
-
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/company/nombela-consulting/" target="_blank" rel="noopener noreferrer">
-          Nombela Consulting Group
-        </a>
-      </p>
-
-      <p>
-        Operating across Africa | Engagements by appointment
-      </p>
+    <section id="team" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title center-title mb-5">Leadership</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 p-4">
+                        <h3 class="color-primary">Ndumiso Ngwabi</h3>
+                        <p class="text-success fw-bold">Founder & Managing Director | CA(SA)</p>
+                        <p class="text-muted">Ndumiso is a Chartered Accountant (SA) with extensive experience across professional and financial services. His work is grounded in the integration of governance, financial integrity, and sustainability, enabling organisations to thrive without compromising accountability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Nombela Consulting Group. All rights reserved.</p>
-  </footer>
+    <section id="contact" class="section-padding bg-platinum">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="contact-box shadow-lg">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h2 class="text-white">Ready to partner?</h2>
+                                <p class="text-light-50">Reach out to discuss how we can support your institution's sustainability journey.</p>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="mailto:info@nombelaconsulting.com" class="btn btn-light btn-lg mb-3 mb-md-0 me-md-3">Email Us</a>
+                                <a href="https://www.linkedin.com/company/nombela-consulting/" target="_blank" class="btn btn-outline-light btn-lg">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-4">Nombela Consulting Group</h5>
+                    <p class="small">Operating across Africa. Engagements by appointment.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small">&copy; 2025 Nombela Consulting Group. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
