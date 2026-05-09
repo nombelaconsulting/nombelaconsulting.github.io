@@ -2,29 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Our Purpose | Nombela Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Purpose | Nombela Consulting Group</title>
+  <meta name="description" content="Nombela Consulting Group exists to help organisations align financial integrity with social responsibility and long-term sustainability." />
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-<header>…same header/nav…</header>
+<nav class="site-nav" id="siteNav">
+  <a href="index.html" class="nav-brand">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+    Nombela Consulting
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="purpose.html" class="active">Purpose</a></li>
+    <li><a href="services.html">Focus Areas</a></li>
+    <li><a href="approach.html">Approach</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="contact.html" class="nav-cta">Start Engagement</a></li>
+  </ul>
+</nav>
 
-<main>
-  <section>
-    <h2>Our Purpose</h2>
-    <p>
-      Our purpose is to help organisations operating in emerging markets align
-      financial integrity with social responsibility and long-term sustainability.
-    </p>
+<!-- HERO -->
+<header class="hero hero-inner">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2068&auto=format&fit=crop');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-sub-label fade-up">Who We Are</span>
+      <h1 class="fade-up delay-1">Our Purpose</h1>
+      <p class="lead fade-up delay-2" style="max-width:500px;">Grounded in integrity. Oriented toward impact.</p>
+    </div>
+  </div>
+</header>
 
-    <p>
-      We believe ESG should move beyond compliance and reporting to become a
-      practical decision-making tool that strengthens governance, attracts
-      capital, and delivers measurable impact.
-    </p>
-  </section>
-</main>
+<!-- PURPOSE BODY -->
+<section class="section bg-white">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+      <div class="reveal">
+        <span class="eyebrow">Why We Exist</span>
+        <h2>Aligning financial integrity with social responsibility.</h2>
+        <div class="accent-rule"></div>
+        <p class="lead">Our purpose is to help organisations operating in emerging markets align financial integrity with social responsibility and long-term sustainability.</p>
+        <p>We believe governance should move beyond compliance and reporting to become a practical decision-making tool that strengthens accountability, attracts partnerships, and delivers measurable impact.</p>
+        <p>Too often, the institutions with the most important missions lack the structural support to fulfil them credibly. We exist to close that gap — bringing international-standard advisory into the context of community-rooted, purpose-driven work.</p>
+        <p>The result is not just better-run organisations. It is stronger communities, more accountable institutions, and a more equitable deployment of capital toward genuine social good.</p>
+      </div>
+      <div class="reveal">
+        <div class="pull-quote" style="margin-bottom:2rem;">
+          <p>"We believe the most powerful work happens at the intersection of rigorous systems and genuine community trust."</p>
+        </div>
 
-<footer>…</footer>
+        <div style="display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;">
+          <div class="card" style="padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1.2rem;">
+            <div class="card-icon" style="flex-shrink:0;margin:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4>Governance as a Foundation</h4>
+              <p style="font-size:0.9rem;">Strong governance is not a box to tick — it is the infrastructure that makes everything else possible.</p>
+            </div>
+          </div>
+          <div class="card" style="padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1.2rem;">
+            <div class="card-icon" style="flex-shrink:0;margin:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h4>Global Standards, Local Wisdom</h4>
+              <p style="font-size:0.9rem;">Rigour drawn from international practice, applied with sensitivity to African contexts and communities.</p>
+            </div>
+          </div>
+          <div class="card" style="padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1.2rem;">
+            <div class="card-icon" style="flex-shrink:0;margin:0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <h4>Systems Over Events</h4>
+              <p style="font-size:0.9rem;">We build infrastructure — not just interventions — so that impact compounds over time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="section bg-platinum" id="sectors">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:560px;margin:0 auto 3.5rem;">
+      <span class="eyebrow">Sectors We Engage</span>
+      <h2>Where our advisory creates the most value.</h2>
+      <div class="accent-rule center"></div>
+    </div>
+    <div class="sector-grid reveal" style="max-width:760px;margin:0 auto;justify-content:center;">
+      <span class="sector-pill">Financial Services &amp; Investment Funds</span>
+      <span class="sector-pill">Agriculture &amp; Agri-Business</span>
+      <span class="sector-pill">Public Sector &amp; Development Institutions</span>
+      <span class="sector-pill">Mining, Energy &amp; Extractives</span>
+      <span class="sector-pill">Non-Profits &amp; Impact Organisations</span>
+      <span class="sector-pill">Social Enterprises</span>
+      <span class="sector-pill">Philanthropy &amp; Foundations</span>
+      <span class="sector-pill">Community Infrastructure</span>
+      <span class="sector-pill">Housing &amp; Urban Development</span>
+      <span class="sector-pill">Education &amp; Youth Development</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--forest-deep);padding:5rem 0;">
+  <div class="container text-center reveal">
+    <h2 style="color:white;margin-bottom:1rem;">Purpose-aligned. Impact-oriented.</h2>
+    <p style="color:rgba(255,255,255,0.7);max-width:480px;margin:0 auto 2rem;">Let's explore how Nombela Consulting can support your organisation's mission.</p>
+    <a href="contact.html" class="btn btn-primary">Start Engagement</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Nombela Consulting Group
+        </div>
+        <p class="footer-tagline">Strategy · Governance · Social Impact Infrastructure</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="purpose.html">Purpose</a></li>
+          <li><a href="services.html">Focus Areas</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Connect</p>
+        <ul class="footer-links">
+          <li><a href="contact.html">Start Engagement</a></li>
+          <li><a href="mailto:info@nombelaconsulting.com">info@nombelaconsulting.com</a></li>
+          <li><a href="https://www.linkedin.com/company/nombela-consulting/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>&copy; 2026 Nombela Consulting Group. All rights reserved.</p>
+      <p>Strategy · Governance · Social Impact Infrastructure</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
+</html>
 </html>
