@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership | Nombela Consulting Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <a href="index.html" class="nav-brand">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+    Nombela Consulting
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="purpose.html">Purpose</a></li>
+    <li><a href="services.html">Focus Areas</a></li>
+    <li><a href="approach.html">Approach</a></li>
+    <li><a href="leadership.html" class="active">Leadership</a></li>
+    <li><a href="contact.html" class="nav-cta">Start Engagement</a></li>
+  </ul>
+</nav>
+
+<header class="hero hero-inner">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-sub-label fade-up">Who Leads the Work</span>
+      <h1 class="fade-up delay-1">Leadership</h1>
+      <p class="lead fade-up delay-2" style="max-width:500px;">Globally trained. Deeply purpose-oriented.</p>
+    </div>
+  </div>
+</header>
+
+<!-- FOUNDER PROFILE -->
+<section class="section bg-white">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.8fr;gap:5rem;align-items:start;">
+      <div class="reveal">
+        <!-- Profile card -->
+        <div style="background:var(--forest-deep);padding:2.5rem;color:white;margin-bottom:1.5rem;">
+          <div style="width:80px;height:80px;background:rgba(106,193,39,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h2 style="color:white;font-size:1.9rem;margin-bottom:0.3rem;">Ndumiso Ngwabi</h2>
+          <p style="color:var(--accent-light);font-family:var(--font-sans);font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;">Founder & Managing Director</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;">
+            <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);">CA(SA)</span>
+            <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);">SARS Registered Tax Practitioner</span>
+            <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);">Chartered Accountants Worldwide</span>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.2rem;">
+            <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;font-family:var(--font-sans);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.75rem;">Global Cities of Practice</p>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <div style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">
+                <div style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></div>
+                London, United Kingdom
+              </div>
+              <div style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">
+                <div style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></div>
+                New York, United States
+              </div>
+              <div style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">
+                <div style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></div>
+                Johannesburg, South Africa
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-dark" style="width:100%;justify-content:center;">Request an Engagement</a>
+      </div>
+
+      <div class="reveal">
+        <span class="eyebrow">Founder Profile</span>
+        <h2>A strategist working at the intersection of finance, governance, philanthropy, and community-driven systems change.</h2>
+        <div class="accent-rule"></div>
+        <p class="lead">With professional experience spanning London, New York, and Johannesburg, Ndumiso brings institutional-level financial and governance expertise into mission-driven work across Africa.</p>
+        <p>His work increasingly focuses on helping organisations build credible structures, strategic partnerships, and scalable systems capable of delivering meaningful social impact.</p>
+
+        <div class="pull-quote" style="margin:2rem 0;">
+          <p>"The most durable change happens when communities are part of the architecture — not just the beneficiaries."</p>
+        </div>
+
+        <p>As Director of the <strong>One K Foundation</strong>, he designs impact metrics and financial sustainability strategies for public health initiatives, bridging the gap between capital and social outcomes.</p>
+
+        <h3 style="margin-top:2.5rem;margin-bottom:1.5rem;">Global Engagement History</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>The ESG Institute | Global</h4>
+            <p class="role">Senior Sustainability Advisor</p>
+            <p>Specialising in sustainability diagnostics, ethical governance, and the integration of long-term thinking into corporate strategy across diverse sectors.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Asset Management & Capital Markets | BDO UK</h4>
+            <p class="role">Investment Assurance & Risk Advisory</p>
+            <p>Advised on valuation methodologies and risk frameworks for UK-based investment firms, with a focus on integrating sustainability considerations within capital market contexts.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Hedge Funds | PwC US</h4>
+            <p class="role">Institutional Governance & Assurance</p>
+            <p>Delivered assurance and governance support for US-based hedge funds, navigating complex regulatory landscapes and institutional accountability mandates.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Financial Services Industry | Deloitte Africa</h4>
+            <p class="role">Financial Institutions Services Team (FIST)</p>
+            <p>Delivered strategic assurance and risk-based advisory for a portfolio of market-leading institutions, including <strong>RMB, Morgan Stanley, and Africa Reinsurance</strong>. Managed high-stakes engagements across Private Equity, Asset Management, and diverse financial infrastructure providers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE K FOUNDATION -->
+<section class="section bg-platinum">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:5rem;align-items:center;">
+      <div class="reveal">
+        <span class="eyebrow">Social Impact Work</span>
+        <h2>One K Foundation</h2>
+        <div class="accent-rule"></div>
+        <p class="lead">Beyond advisory practice, Ndumiso serves as a Director of the One K Foundation — bridging capital and social outcomes in public health and community development.</p>
+        <p>This work informs and deepens the Nombela Consulting Group's approach: bringing real-world experience of what it means to design systems that must actually work for communities — not just satisfy institutional requirements.</p>
+        <p>The Foundation work also grounds the firm's philanthropic advisory practice, with direct experience of funder relationships, governance design, and impact measurement in practice.</p>
+      </div>
+      <div class="reveal">
+        <div style="background:var(--forest-deep);padding:2.5rem;color:white;">
+          <div class="card-icon" style="background:rgba(106,193,39,0.15);margin-bottom:1.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="var(--accent)"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 style="color:white;margin-bottom:0.5rem;">Community-Rooted Work</h3>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;">Ndumiso's advisory practice is shaped by direct involvement in the organisations he supports — not just theory, but lived institutional experience.</p>
+          <div style="border-top:1px solid rgba(255,255,255,0.1);margin-top:1.5rem;padding-top:1.5rem;">
+            <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;font-family:var(--font-sans);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Related Initiatives</p>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <span style="color:var(--accent-light);font-size:0.85rem;">Ubuntu Home</span>
+              <span style="color:var(--accent-light);font-size:0.85rem;">Walk for Home</span>
+              <span style="color:var(--accent-light);font-size:0.85rem;">Mbali the Village</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--accent);padding:5rem 0;">
+  <div class="container text-center reveal">
+    <h2 style="color:white;margin-bottom:1rem;">Ready to work together?</h2>
+    <p style="color:rgba(255,255,255,0.85);max-width:480px;margin:0 auto 2rem;">Reach out to begin a conversation about your organisation's needs.</p>
+    <a href="contact.html" class="btn" style="background:var(--forest-deep);color:white;border-color:var(--forest-deep);">Start Engagement</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Nombela Consulting Group
+        </div>
+        <p class="footer-tagline">Strategy · Governance · Social Impact Infrastructure</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="purpose.html">Purpose</a></li>
+          <li><a href="services.html">Focus Areas</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Connect</p>
+        <ul class="footer-links">
+          <li><a href="contact.html">Start Engagement</a></li>
+          <li><a href="mailto:info@nombelaconsulting.com">info@nombelaconsulting.com</a></li>
+          <li><a href="https://www.linkedin.com/company/nombela-consulting/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>&copy; 2026 Nombela Consulting Group. All rights reserved.</p>
+      <p>Strategy · Governance · Social Impact Infrastructure</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
