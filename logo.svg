@@ -1,0 +1,30 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nombela Consulting Group">
+
+  <!-- White background -->
+  <rect width="800" height="800" fill="#ffffff"/>
+
+  <!-- Outer ring -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#e0e0dc" stroke-width="6"/>
+  <!-- Inner ring -->
+  <circle cx="400" cy="400" r="250" fill="none" stroke="#004f30" stroke-width="6" opacity="0.3"/>
+
+  <!-- North point — accent green -->
+  <polygon points="400,60 451,290 400,240 349,290" fill="#6ac127"/>
+  <!-- South point -->
+  <polygon points="400,740 451,510 400,560 349,510" fill="#004f30" opacity="0.5"/>
+  <!-- East point -->
+  <polygon points="740,400 510,349 560,400 510,451" fill="#004f30"/>
+  <!-- West point -->
+  <polygon points="60,400 290,349 240,400 290,451" fill="#004f30"/>
+
+  <!-- Centre circle -->
+  <circle cx="400" cy="400" r="58" fill="#004f30"/>
+  <circle cx="400" cy="400" r="30" fill="#6ac127"/>
+
+  <!-- Intercardinal diamond accents -->
+  <polygon points="590,210 620,180 650,210 620,240" fill="#6ac127" opacity="0.5"/>
+  <polygon points="590,590 620,560 650,590 620,620" fill="#6ac127" opacity="0.5"/>
+  <polygon points="150,210 180,180 210,210 180,240" fill="#6ac127" opacity="0.5"/>
+  <polygon points="150,590 180,560 210,590 180,620" fill="#6ac127" opacity="0.5"/>
+
+</svg>
