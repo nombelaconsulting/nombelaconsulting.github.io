@@ -108,7 +108,20 @@ p:last-child { margin-bottom: 0; }
   text-transform: uppercase;
   color: var(--forest-deep);
 }
-.nav-brand svg { width: 22px; height: 22px; stroke: var(--accent); }
+.nav-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+.footer-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
 
 .nav-links {
   display: flex;
@@ -552,7 +565,7 @@ select.form-control { cursor: pointer; background-image: url("data:image/svg+xml
   align-items: center;
   gap: 10px;
 }
-.footer-brand svg { width: 20px; height: 20px; stroke: var(--accent); }
+
 .footer-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; font-family: var(--font-sans); }
 .footer-links { list-style: none; }
 .footer-links li { margin-bottom: 0.6rem; }
