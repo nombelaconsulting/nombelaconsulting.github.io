@@ -8,14 +8,37 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon: Compass Rose mark -->
+  <link rel="icon" href="nombela-logo-favicon-32x32.svg" type="image/svg+xml" />
 </head>
 <body>
 
 <!-- ===== NAV ===== -->
 <nav class="site-nav" id="siteNav">
   <a href="index.html" class="nav-brand">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    <!--
+      COMPASS ROSE — nav logo
+      Sized at 36×36px, colours inverted to white so it reads on the dark nav bar.
+      North point kept in accent green (#6ac127) for brand recognition.
+    -->
+    <svg width="36" height="36" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <!-- North point — accent green (same on light/dark) -->
+      <polygon points="16,1 19,13 16,10 13,13" fill="#6ac127"/>
+      <!-- South point -->
+      <polygon points="16,31 19,19 16,22 13,19" fill="#ffffff" opacity="0.6"/>
+      <!-- East point -->
+      <polygon points="31,16 19,13 22,16 19,19" fill="#ffffff"/>
+      <!-- West point -->
+      <polygon points="1,16 13,13 10,16 13,19" fill="#ffffff"/>
+      <!-- Centre -->
+      <circle cx="16" cy="16" r="3.5" fill="#ffffff"/>
+      <circle cx="16" cy="16" r="1.8" fill="#6ac127"/>
+      <!-- Intercardinal diamonds -->
+      <polygon points="24,8 26,6 28,8 26,10" fill="#6ac127" opacity="0.6"/>
+      <polygon points="24,24 26,22 28,24 26,26" fill="#6ac127" opacity="0.6"/>
+      <polygon points="4,8 6,6 8,8 6,10" fill="#6ac127" opacity="0.6"/>
+      <polygon points="4,24 6,22 8,24 6,26" fill="#6ac127" opacity="0.6"/>
     </svg>
     Nombela Consulting
   </a>
@@ -209,7 +232,23 @@
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:0;">
       <div>
         <div class="footer-brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <!--
+            COMPASS ROSE — footer logo
+            Rendered at 32×32px in all-white so it sits cleanly on the dark footer.
+            North point and diamonds stay in accent green for visual hierarchy.
+          -->
+          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="flex-shrink:0;">
+            <polygon points="16,1 19,13 16,10 13,13" fill="#6ac127"/>
+            <polygon points="16,31 19,19 16,22 13,19" fill="#ffffff" opacity="0.5"/>
+            <polygon points="31,16 19,13 22,16 19,19" fill="#ffffff"/>
+            <polygon points="1,16 13,13 10,16 13,19" fill="#ffffff"/>
+            <circle cx="16" cy="16" r="3.5" fill="#ffffff"/>
+            <circle cx="16" cy="16" r="1.8" fill="#6ac127"/>
+            <polygon points="24,8 26,6 28,8 26,10" fill="#6ac127" opacity="0.6"/>
+            <polygon points="24,24 26,22 28,24 26,26" fill="#6ac127" opacity="0.6"/>
+            <polygon points="4,8 6,6 8,8 6,10" fill="#6ac127" opacity="0.6"/>
+            <polygon points="4,24 6,22 8,24 6,26" fill="#6ac127" opacity="0.6"/>
+          </svg>
           Nombela Consulting Group
         </div>
         <p class="footer-tagline">Strategy · Governance · Social Impact Infrastructure</p>
@@ -231,7 +270,7 @@
           <li><a href="contact.html">Start Engagement</a></li>
           <li><a href="mailto:info@nombelaconsulting.com">info@nombelaconsulting.com</a></li>
           <li><a href="https://www.linkedin.com/company/nombela-consulting/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#">Cape Town, South Africa</a></li>
+          <li><a href="#">Johannesburg, South Africa</a></li>
         </ul>
       </div>
     </div>
