@@ -7,9 +7,128 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Headshot styles ── */
+    .headshot-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+    }
+    .headshot-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border: none;
+    }
+    /* Accent corner frame */
+    .headshot-wrap::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      width: 80px;
+      height: 80px;
+      border-top: 3px solid var(--accent);
+      border-left: 3px solid var(--accent);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .headshot-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
+      border-bottom: 3px solid var(--accent);
+      border-right: 3px solid var(--accent);
+      z-index: 2;
+      pointer-events: none;
+    }
+    /* Name block below headshot */
+    .headshot-nameplate {
+      background: var(--forest-deep);
+      padding: 1.4rem 1.6rem;
+      margin-top: 0;
+    }
+    .headshot-nameplate h3 {
+      color: white;
+      font-size: 1.3rem;
+      margin: 0 0 0.25rem;
+    }
+    .headshot-nameplate .role-line {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin: 0 0 1rem;
+    }
+    .headshot-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    /* Affiliations strip */
+    .affiliations-strip {
+      background: var(--platinum);
+      border-left: 3px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      margin-top: 2rem;
+    }
+    .affiliations-strip p.aff-label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 0.75rem;
+    }
+    .affiliations-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .affiliations-list li {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--charcoal);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .affiliations-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.45em;
+    }
+    .affiliations-list a {
+      color: var(--forest);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+    .affiliations-list a:hover { color: var(--accent); }
+ 
+    @media (max-width: 768px) {
+      .headshot-wrap { max-width: 100%; }
+      .headshot-wrap::before, .headshot-wrap::after { display: none; }
+    }
+  </style>
 </head>
 <body>
-
+ 
 <nav class="site-nav" id="siteNav">
   <a href="index.html" class="nav-brand">
     <img src="logo.svg" alt="Nombela Consulting Group" class="nav-logo" />
@@ -27,7 +146,7 @@
     <li><a href="contact.html" class="nav-cta">Start Engagement</a></li>
   </ul>
 </nav>
-
+ 
 <header class="hero hero-inner">
   <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop');"></div>
   <div class="hero-overlay"></div>
@@ -39,58 +158,66 @@
     </div>
   </div>
 </header>
-
-<!-- FOUNDER PROFILE -->
+ 
+<!-- ===== FOUNDER PROFILE ===== -->
 <section class="section bg-white">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1.8fr;gap:5rem;align-items:start;">
+ 
+      <!-- LEFT — headshot + nameplate + affiliations -->
       <div class="reveal">
-        <!-- Profile card -->
-        <div style="background:var(--forest-deep);padding:2.5rem;color:white;margin-bottom:1.5rem;">
-          <div style="width:80px;height:80px;background:rgba(106,193,39,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;padding:12px;">
-            <img src="logo.svg" alt="Nombela Consulting Group" style="width:56px;height:56px;object-fit:contain;" />
-          </div>
-          <h2 style="color:white;font-size:1.9rem;margin-bottom:0.3rem;">Ndumiso Ngwabi</h2>
-          <p style="color:var(--accent-light);font-family:var(--font-sans);font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;">Founder & Managing Director</p>
-          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;">
-            <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);">CA(SA)</span>
-            <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);">SARS Registered Tax Practitioner</span>
-            <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);">Chartered Accountants Worldwide</span>
-          </div>
-          <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.2rem;">
-            <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;font-family:var(--font-sans);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.75rem;">Global Cities of Practice</p>
-            <div style="display:flex;flex-direction:column;gap:0.5rem;">
-              <div style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">
-                <div style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></div>
-                London, United Kingdom
-              </div>
-              <div style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">
-                <div style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></div>
-                New York, United States
-              </div>
-              <div style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">
-                <div style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></div>
-                Johannesburg, South Africa
-              </div>
+ 
+        <div class="headshot-wrap">
+          <img
+            src="ndumiso-headshot.png"
+            alt="Ndumiso Ngwabi — Founder & Managing Director, Nombela Consulting Group"
+            class="headshot-img"
+          />
+          <div class="headshot-nameplate">
+            <h3>Ndumiso Ngwabi</h3>
+            <p class="role-line">Founder &amp; Managing Director</p>
+            <div class="headshot-tags">
+              <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);font-size:0.65rem;">CA(SA)</span>
+              <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);font-size:0.65rem;">SARS Tax Practitioner</span>
+              <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);font-size:0.65rem;">CAW Member</span>
+              <span class="tag" style="border-color:rgba(106,193,39,0.5);color:var(--accent-light);font-size:0.65rem;">ESG Institute Senior Advisor</span>
             </div>
           </div>
         </div>
-        <a href="contact.html" class="btn btn-dark" style="width:100%;justify-content:center;">Request an Engagement</a>
+ 
+        <!-- Affiliations -->
+        <div class="affiliations-strip">
+          <p class="aff-label">Affiliations &amp; Commitments</p>
+          <ul class="affiliations-list">
+            <li>Chartered Accountants Worldwide — Network Member</li>
+            <li>The ESG Institute — Senior Sustainability Advisor</li>
+            <li>
+              <a href="https://www.thejenadeclaration.org/supporters/organisations" target="_blank" rel="noopener">
+                The Jena Declaration — Institutional Signatory
+              </a>
+            </li>
+            <li>One K Foundation — Director</li>
+            <li>Ubuntu Home Foundation — Director</li>
+          </ul>
+        </div>
+ 
+        <a href="contact.html" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:1.5rem;">Request an Engagement</a>
       </div>
-
+ 
+      <!-- RIGHT — bio + timeline -->
       <div class="reveal">
         <span class="eyebrow">Founder Profile</span>
         <h2>A strategist working at the intersection of finance, governance, philanthropy, and community-driven systems change.</h2>
         <div class="accent-rule"></div>
         <p class="lead">With professional experience spanning London, New York, and Johannesburg, Ndumiso brings institutional-level financial and governance expertise into mission-driven work across Africa.</p>
         <p>His work increasingly focuses on helping organisations build credible structures, strategic partnerships, and scalable systems capable of delivering meaningful social impact.</p>
-
+ 
         <div class="pull-quote" style="margin:2rem 0;">
           <p>"The most durable change happens when communities are part of the architecture — not just the beneficiaries."</p>
         </div>
-
-        <p>As Director of the <strong>One K Foundation</strong>, he designs impact metrics and financial sustainability strategies for public health initiatives, bridging the gap between capital and social outcomes.</p>
-
+ 
+        <p>As Director of the <strong>One K Foundation</strong>, he designs impact metrics and financial sustainability strategies for public health initiatives, bridging the gap between capital and social outcomes. His work is further informed by active roles across Ubuntu Home Foundation, Mbali the Village, and Final Cry Ministries — giving him lived experience of the systems, governance, and funding challenges that mission-driven organisations face on the ground.</p>
+ 
         <h3 style="margin-top:2.5rem;margin-bottom:1.5rem;">Global Engagement History</h3>
         <div class="timeline">
           <div class="timeline-item">
@@ -99,13 +226,13 @@
             <p>Specialising in sustainability diagnostics, ethical governance, and the integration of long-term thinking into corporate strategy across diverse sectors.</p>
           </div>
           <div class="timeline-item">
-            <h4>Asset Management & Capital Markets | BDO UK</h4>
-            <p class="role">Investment Assurance & Risk Advisory</p>
+            <h4>Asset Management &amp; Capital Markets | BDO UK</h4>
+            <p class="role">Investment Assurance &amp; Risk Advisory</p>
             <p>Advised on valuation methodologies and risk frameworks for UK-based investment firms, with a focus on integrating sustainability considerations within capital market contexts.</p>
           </div>
           <div class="timeline-item">
             <h4>Hedge Funds | PwC US</h4>
-            <p class="role">Institutional Governance & Assurance</p>
+            <p class="role">Institutional Governance &amp; Assurance</p>
             <p>Delivered assurance and governance support for US-based hedge funds, navigating complex regulatory landscapes and institutional accountability mandates.</p>
           </div>
           <div class="timeline-item">
@@ -115,11 +242,12 @@
           </div>
         </div>
       </div>
+ 
     </div>
   </div>
 </section>
-
-<!-- ONE K FOUNDATION -->
+ 
+<!-- ===== ONE K FOUNDATION ===== -->
 <section class="section bg-platinum">
   <div class="container">
     <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:5rem;align-items:center;">
@@ -134,16 +262,19 @@
       <div class="reveal">
         <div style="background:var(--forest-deep);padding:2.5rem;color:white;">
           <div class="card-icon" style="background:rgba(106,193,39,0.15);margin-bottom:1.5rem;">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="var(--accent)"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="var(--accent)">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
           </div>
           <h3 style="color:white;margin-bottom:0.5rem;">Community-Rooted Work</h3>
           <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;">Ndumiso's advisory practice is shaped by direct involvement in the organisations he supports — not just theory, but lived institutional experience.</p>
           <div style="border-top:1px solid rgba(255,255,255,0.1);margin-top:1.5rem;padding-top:1.5rem;">
             <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;font-family:var(--font-sans);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Related Initiatives</p>
             <div style="display:flex;flex-direction:column;gap:0.5rem;">
-              <span style="color:var(--accent-light);font-size:0.85rem;">Ubuntu Home</span>
+              <span style="color:var(--accent-light);font-size:0.85rem;">Ubuntu Home Foundation</span>
               <span style="color:var(--accent-light);font-size:0.85rem;">Walk for Home</span>
               <span style="color:var(--accent-light);font-size:0.85rem;">Mbali the Village</span>
+              <span style="color:var(--accent-light);font-size:0.85rem;">Final Cry Ministries</span>
             </div>
           </div>
         </div>
@@ -151,8 +282,30 @@
     </div>
   </div>
 </section>
-
-<!-- CTA -->
+ 
+<!-- ===== JENA DECLARATION ===== -->
+<section class="section bg-white">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;text-align:center;" class="reveal">
+      <span class="eyebrow">Global Commitment</span>
+      <h2>The Jena Declaration</h2>
+      <div class="accent-rule center"></div>
+      <p class="lead">Nombela Consulting Group is a proud Institutional Signatory of The Jena Declaration — a global initiative convened under the UNESCO Chair on Global Understanding for Sustainability, committed to building a healthier, safer, and more sustainable world.</p>
+      <p>As a signatory, the firm stands alongside global institutions including the Club of Rome, UNESCO Chairs, and Henley Business School Africa in affirming that sustainable development requires the integration of governance, community, and long-term institutional commitment.</p>
+      <a
+        href="https://www.thejenadeclaration.org/supporters/organisations"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-dark"
+        style="margin-top:1.5rem;display:inline-flex;"
+      >
+        View the Declaration Signatories ↗
+      </a>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== CTA ===== -->
 <section style="background:var(--accent);padding:5rem 0;">
   <div class="container text-center reveal">
     <h2 style="color:white;margin-bottom:1rem;">Ready to work together?</h2>
@@ -160,7 +313,7 @@
     <a href="contact.html" class="btn" style="background:var(--forest-deep);color:white;border-color:var(--forest-deep);">Start Engagement</a>
   </div>
 </section>
-
+ 
 <footer class="site-footer">
   <div class="container">
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;">
@@ -185,19 +338,19 @@
         <p class="footer-heading">Connect</p>
         <ul class="footer-links">
           <li><a href="contact.html">Start Engagement</a></li>
-          <li><a href="mailto:info@nombelaconsulting.com">info@nombelaconsulting.com</a></li>
+          <li><a href="mailto:ndumiso.ngwabi@nombelaconsulting.com">ndumiso.ngwabi@nombelaconsulting.com</a></li>
           <li><a href="https://www.linkedin.com/company/nombela-consulting/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <hr class="footer-divider" />
     <div class="footer-bottom">
-      <p>&copy; 2026 Nombela Consulting Group, a division of Nombela Group (Pty) Ltd (Est. 2020). All rights reserved.</p>
+      <p>&copy; 2026 Nombela Consulting Group. All rights reserved.</p>
       <p>Strategy · Governance · Social Impact Infrastructure</p>
     </div>
   </div>
 </footer>
-
+ 
 <script src="main.js"></script>
 </body>
 </html>
